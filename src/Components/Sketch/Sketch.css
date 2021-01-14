@@ -1,0 +1,9 @@
+.SketchContainer {
+  box-sizing: border-box;
+  background-color: gainsboro;
+  width: 500px;
+  height: 500px;
+  margin: 20vh auto;
+  display: flex;
+  flex-flow: row wrap;
+}
