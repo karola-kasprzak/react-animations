@@ -11,7 +11,9 @@ class Tiles extends Component {
     render() {
         return (
             <div className={classes.TilesContainer}>
-                <Tile generate={this.generateRandomColor} />
+                <div id="1">
+                    <Tile generate={this.generateRandomColor} />
+                </div>
                 <Tile generate={this.generateRandomColor} />
                 <Tile generate={this.generateRandomColor} />
                 <Tile generate={this.generateRandomColor} />

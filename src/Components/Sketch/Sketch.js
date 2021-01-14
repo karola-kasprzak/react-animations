@@ -9,8 +9,8 @@ class Sketch extends Component {
     }
 
     generateRandomColor(event) {
-        let randomNum = Math.floor(Math.random() * 359);
-        event.target.style.backgroundColor = `hsl(${randomNum},100%, 70%)`;
+        let randomNum = Math.floor(Math.random() * 65 + 185);
+        event.target.style.backgroundColor = `hsl(${randomNum}, 100%, 70%)`;
     }
 
     render() {
