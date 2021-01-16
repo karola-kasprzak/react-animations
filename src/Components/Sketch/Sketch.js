@@ -6,7 +6,7 @@ class Sketch extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isReset: false,
+            isReset: true,
             isBlue: false,
             isGray: false,
             isGreen: true,
@@ -38,27 +38,47 @@ class Sketch extends Component {
     };
 
     handleReset = () => {
-        this.setState({ isReset: true });
-        console.log(this.state);
+        this.setState({ isReset: !this.state.isReset });
+        console.log(this.state); //shows state before update in prev line???
     };
 
     handleBlueScale = () => {
         this.setState({ isBlue: true, isGray: false, isGreen: false });
-        // console.log(this.state); **shows state before update in prev line???
     };
 
     handleGrayScale = () => {
         this.setState({ isBlue: false, isGray: true, isGreen: false });
-        console.log(this.state);
+    };
+
+    handleGreenScale = () => {
+        this.setState({ isBlue: false, isGray: false, isGreen: true });
     };
 
     render() {
         return (
             <div className="SketchPanel">
                 <div className="ButtonPanel">
-                    <button onClick={this.handleReset}>Reset</button>
-                    <button onClick={this.handleGrayScale}>Gray Scale</button>
-                    <button onClick={this.handleBlueScale}>Blue Scale</button>
+                    <button className={classes.Btn} onClick={this.handleReset}>
+                        Reset
+                    </button>
+                    <button
+                        className={classes.Btn}
+                        onClick={this.handleGrayScale}
+                    >
+                        Gray Scale
+                    </button>
+                    <button
+                        className={classes.Btn}
+                        onClick={this.handleBlueScale}
+                    >
+                        Blue Scale
+                    </button>
+                    <button
+                        className={classes.Btn}
+                        onClick={this.handleGreenScale}
+                    >
+                        Green Scale
+                    </button>
                 </div>
                 <div className={classes.SketchContainer}>
                     <Pixel generate={this.generateRandomColor}></Pixel>

@@ -1,7 +1,14 @@
+.Tile:nth-child(even) {
+  background-color: silver;
+}
+
+.Tile:nth-child(odd) {
+  background-color: gainsboro;
+}
+
 .Tile {
   width: 150px;
   height: 150px;
-  background-color: #ccc;
 }
 
 .Tile:hover {
@@ -10,6 +17,8 @@
   tile-spin 0.5s 0.3s 1 linear;
 
 }
+
+
 
 @keyframes tile-spin {
   from {transform: rotateY(0deg)}

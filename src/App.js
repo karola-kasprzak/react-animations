@@ -9,8 +9,10 @@ class App extends Component {
     render() {
         return (
             <div className={classes.App}>
-                <h1>Hi, I'm a React App</h1>
+                <h1>Animation Examples</h1>
+                <h2>#1 Random Color Tiles</h2>
                 <Tiles />
+                <h2>#2 Etch-a-Sketch</h2>
                 <Sketch />
             </div>
         );

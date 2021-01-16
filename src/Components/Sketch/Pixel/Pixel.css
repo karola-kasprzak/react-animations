@@ -1,3 +1,7 @@
+.Reset {
+  background-color: whitesmoke;
+}
+
 .Pixel {
   box-sizing: border-box;
   border: 1px solid #ccc;
